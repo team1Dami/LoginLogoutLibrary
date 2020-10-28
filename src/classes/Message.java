@@ -12,36 +12,36 @@ import java.io.Serializable;
  * @author eneko
  */
 public class Message implements Serializable{
-    private User usuario;
+    private User user;
     private enum Type{
         logIn,
         logUp,
         logOut
     }
     
-    private Exception e;
+    private Exception exception;
     
     public User getUsuario() {
-        return usuario;
+        return user;
     }
 
     public Exception getE() {
-        return e;
+        return exception;
     }
 
-    public void setUsuario(User usuario) {
-        this.usuario = usuario;
+    public void setUsuario(User user) {
+        this.user = user;
     }
 
-    public void setE(Exception e) {
-        this.e = e;
+    public void setE(Exception exception) {
+        this.exception = exception;
     }
-    public void set(User user, int tipo){
-        usuario=user;
-        if (tipo==1){
+    public void set(User user, int option){
+        user=user;
+        if (option==1){
             Type type = Type.logIn;
         }
-        else if(tipo==2){
+        else if(option==2){
             Type type = Type.logUp;
         }
     }
