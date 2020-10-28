@@ -18,31 +18,31 @@ public class Message implements Serializable{
         logUp,
         logOut
     }
+    private Type type;
     
     private Exception exception;
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
     
-    public User getUsuario() {
+    public User getUser() {
         return user;
     }
 
-    public Exception getE() {
+    public Exception getException() {
         return exception;
     }
 
-    public void setUsuario(User user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
-    public void setE(Exception exception) {
+    public void setException(Exception exception) {
         this.exception = exception;
-    }
-    public void set(User user, int option){
-        user=user;
-        if (option==1){
-            Type type = Type.logIn;
-        }
-        else if(option==2){
-            Type type = Type.logUp;
-        }
     }
 }
