@@ -13,7 +13,7 @@ import classes.User;
  */
 public interface ClientServer {
     
-    public void signIn(User user);
-    public void signUp(User user);
+    public User signIn(User user);
+    public User signUp(User user);
   //  public void logOut();
 }
