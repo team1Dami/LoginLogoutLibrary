@@ -13,13 +13,14 @@ import java.io.Serializable;
  */
 public class Message implements Serializable{
     private User usuario;
-    private enum type{
+    private enum Type{
         logIn,
         logUp,
         logOut
     }
+    
     private Exception e;
-
+    
     public User getUsuario() {
         return usuario;
     }
@@ -35,5 +36,13 @@ public class Message implements Serializable{
     public void setE(Exception e) {
         this.e = e;
     }
-    
+    public void set(User user, int tipo){
+        usuario=user;
+        if (tipo==1){
+            Type type = Type.logIn;
+        }
+        else if(tipo==2){
+            Type type = Type.logUp;
+        }
+    }
 }
