@@ -12,8 +12,11 @@ import java.io.Serializable;
  * @author eneko
  */
 public class Message implements Serializable{
+    
+    public Message (){    }
+    
     private User user;
-    private enum Type{
+    enum Type{
         logIn,
         logUp,
         logOut
@@ -22,8 +25,8 @@ public class Message implements Serializable{
     
     private Exception exception;
 
-    public Type getType() {
-        return type;
+    public String getType() {
+        return type.name();
     }
 
     public void setType(Type type) {
