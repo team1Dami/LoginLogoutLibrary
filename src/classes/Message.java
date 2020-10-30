@@ -16,21 +16,25 @@ public class Message implements Serializable{
     public Message (){    }
     
     private User user;
-    enum Type{
+
+    public enum Type{
         logIn,
         logUp,
         logOut
     }
     private Type type;
     
-    private Exception exception;
+    private Exception exception=null;
 
     public String getType() {
         return type.name();
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setType(int windowType) {
+        if(windowType==1)
+            this.type=type.logIn;
+        else if(windowType==2)
+            this.type=type.logUp;
     }
     
     public User getUser() {
