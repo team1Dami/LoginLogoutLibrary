@@ -46,8 +46,13 @@ public class User implements Serializable{
         return status;
     }
 
-    public void setStatus(Userstatus status) {
-        this.status = status;
+    public void setStatus(int status) {
+        if(status==1){
+            this.status=Userstatus.ENABLE;
+        }
+        else{
+            this.status=Userstatus.DISABLE;
+        }
     }
     public Integer getId() {
         return id;
