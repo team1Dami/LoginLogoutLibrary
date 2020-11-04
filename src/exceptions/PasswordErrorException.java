@@ -21,7 +21,7 @@ public class PasswordErrorException extends Exception implements Serializable{
 
     public String getMessage() {
         if (password == null) {
-            return "the login is not be in the data base";
+            return "Usuario o contraseña incorrectos";
         } else {
             return null;
         }

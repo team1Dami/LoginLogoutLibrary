@@ -19,13 +19,10 @@ public class NoConnectionDBException extends Exception implements Serializable {
         this.message = log;
     }
 
-    public NoConnectionDBException() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public String getMessage() {
         if (message == null) {
-            return "The connection with the DB has failled";
+            return "Ha ocurrido un error inesperado"
+                        + "\n Inténtelo de nuevo en unos minutos";
         } else {
             return null;
         }

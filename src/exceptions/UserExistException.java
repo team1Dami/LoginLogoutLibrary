@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package exceptions;
 
 import java.io.Serializable;
@@ -21,7 +16,7 @@ public class UserExistException extends Exception implements Serializable {
 
     public String getMessage() {
         if (Login == null) {
-            return "Duplicated loggin, can't be seted";
+            return "El login ya está registrado";
         } else {
             return null;
         }

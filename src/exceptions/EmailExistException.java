@@ -21,7 +21,7 @@ public class EmailExistException extends Exception implements Serializable {
 
     public String getMessage() {
         if (eMail == null) {
-            return "This email is duplicated, can't be seted";
+            return "El email ya está registrado";
         } else {
             return null;
         }

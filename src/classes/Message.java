@@ -1,19 +1,13 @@
-/*
- * 
- *
- */
 package classes;
 
 import java.io.Serializable;
 
 /**
+ * Class Message used to communicate with the server
  *
  * @author eneko
  */
 public class Message implements Serializable {
-
-    public Message() {
-    }
 
     private User user;
 
@@ -23,18 +17,25 @@ public class Message implements Serializable {
         logOut
     }
     private Type type;
-
     private Exception exception;
 
     /**
+     * constructor
+     */
+    public Message() {
+    }
+
+    /**
+     * Method to obtain the enum type
      *
-     * @return
+     * @return logIn or logUp or logOut
      */
     public String getType() {
         return type.name();
     }
 
     /**
+     * Method to set the enum type in order to ask for a query to the DB
      *
      * @param windowType
      */
@@ -47,22 +48,29 @@ public class Message implements Serializable {
     }
 
     /**
+     * Method to obtain the User class with the values of the DB
      *
-     * @return
+     * @return User class
      */
     public User getUser() {
         return user;
     }
 
     /**
+     * Method to obtain the exception message
      *
-     * @return
+     * @return string message or null
      */
-    public Exception getException() {
-        return exception;
+    public String getException() {
+        if (exception == null) {
+            return null;
+        } else {
+            return this.exception.getMessage();
+        }
     }
 
     /**
+     * Method to set the User class with the values of the client
      *
      * @param user
      */
@@ -71,8 +79,9 @@ public class Message implements Serializable {
     }
 
     /**
+     * Method to set the exception
      *
-     * @param exception
+     * @param exception it can be null
      */
     public void setException(Exception exception) {
         this.exception = exception;

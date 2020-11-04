@@ -21,7 +21,8 @@ public class EmailFormatException extends Exception implements Serializable {
 
     public String getMessage() {
         if (eMail == null) {
-            return "Invalid email format";
+            return "Email con formato incorrecto"
+                        + "\n Por favor introduzca un email válido";
         } else {
             return null;
         }
