@@ -11,6 +11,19 @@ import java.io.Serializable;
  *
  * @author saray
  */
-public class EmailExistException extends Exception implements Serializable{
-    
+public class EmailExistException extends Exception implements Serializable {
+
+    private String eMail;
+
+    public EmailExistException(String e) {
+        this.eMail = e;
+    }
+
+    public String getMessage() {
+        if (eMail == null) {
+            return "This email is duplicated, can't be seted";
+        } else {
+            return null;
+        }
+    }
 }

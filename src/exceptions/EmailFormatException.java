@@ -6,10 +6,24 @@
 package exceptions;
 
 import java.io.Serializable;
+
 /**
  *
  * @author saray
  */
-public class EmailFormatException extends Exception implements Serializable{
-    
+public class EmailFormatException extends Exception implements Serializable {
+
+    private String eMail;
+
+    public EmailFormatException(String e) {
+        this.eMail = e;
+    }
+
+    public String getMessage() {
+        if (eMail == null) {
+            return "Invalid email format";
+        } else {
+            return null;
+        }
+    }
 }

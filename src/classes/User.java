@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ *
  */
 package classes;
 
@@ -12,14 +11,14 @@ import java.util.Date;
  *
  * @author 2dam
  */
-public class User implements Serializable{
-    
-    enum Userstatus{
+public class User implements Serializable {
+
+    enum Userstatus {
         ENABLE,
         DISABLE
-        
     }
-    enum UserPrivilage{
+
+    enum UserPrivilege {
         USER,
         ADMIN
     }
@@ -28,35 +27,67 @@ public class User implements Serializable{
     private String email;
     private String fullname;
     private Userstatus status;
-    private UserPrivilage privilage;
+    private UserPrivilege privilege;
     private String passwd;
     private java.sql.Date lastAccess;
     private java.sql.Date lastPasswdChange;
 
-    public UserPrivilage getPrivilage() {
-        return privilage;
+    /**
+     *
+     * @return
+     */
+    public UserPrivilege getPrivilege() {
+        return privilege;
     }
 
-    public void setPrivilage(UserPrivilage privilage) {
-        this.privilage = privilage;
-    }
-    
-    
-    public Userstatus getStatus() {
-        return status;
+    /**
+     *
+     * @param privilege
+     */
+    public void setPrivilege(UserPrivilege privilege) {
+        this.privilege = privilege;
     }
 
-    public void setStatus(Userstatus status) {
-        this.status = status;
+    /**
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status.name();
     }
+
+    /**
+     *
+     * @param status
+     */
+    public void setStatus(int status) {
+        if (status == 1) {
+            this.status = Userstatus.ENABLE;
+        } else {
+            this.status = Userstatus.DISABLE;
+        }
+    }
+
+    /**
+     *
+     * @return
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLogIn() {
         return logIn;
     }
@@ -104,5 +135,5 @@ public class User implements Serializable{
     public void setLastPasswdChange(Date lastPasswdChange) {
         this.lastPasswdChange = (java.sql.Date) lastPasswdChange;
     }
-  
+
 }

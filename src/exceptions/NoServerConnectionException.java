@@ -9,23 +9,25 @@ import java.io.Serializable;
 
 /**
  *
- * @author saray
+ * @author 2dam
  */
-public class NoConnectionDBException extends Exception implements Serializable {
+public class NoServerConnectionException extends Exception implements Serializable {
 
     private String message;
+    private Error code;
 
-    public NoConnectionDBException(String log) {
-        this.message = log;
+    public NoServerConnectionException(String m, Throwable cause, Error code ) {
+        super(m, cause);
+        this.code = code;
     }
 
-    public NoConnectionDBException() {
+    public NoServerConnectionException() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getMessage() {
         if (message == null) {
-            return "The connection with the DB has failled";
+            return "The connection with the server has failled";
         } else {
             return null;
         }

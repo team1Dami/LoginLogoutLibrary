@@ -13,4 +13,17 @@ import java.io.Serializable;
  */
 public class PasswordErrorException extends Exception implements Serializable{
     
+    private String password;
+
+    public PasswordErrorException(String passwd) {
+        this.password = passwd;
+    }
+
+    public String getMessage() {
+        if (password == null) {
+            return "the login is not be in the data base";
+        } else {
+            return null;
+        }
+    }
 }
