@@ -33,8 +33,8 @@ public class User implements Serializable{
     private java.sql.Date lastAccess;
     private java.sql.Date lastPasswdChange;
 
-    public UserPrivilage getPrivilage() {
-        return privilage;
+    public String getPrivilage() {
+        return privilage.name();
     }
 
     public void setPrivilage(UserPrivilage privilage) {
@@ -42,8 +42,8 @@ public class User implements Serializable{
     }
     
     
-    public Userstatus getStatus() {
-        return status;
+    public String getStatus() {
+        return status.name();
     }
 
     public void setStatus(int status) {
