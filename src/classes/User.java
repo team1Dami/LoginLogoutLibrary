@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Class User used to set the values of the client
  * This class is common to the both projects
- * @author 2dam
+ * @author eneko, ruben, saray
  */
 public class User implements Serializable {
 
