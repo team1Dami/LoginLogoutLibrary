@@ -8,21 +8,22 @@ package exceptions;
 import java.io.Serializable;
 
 /**
- * PasswordErrorException class
+ * NoServerConnectionException class
  *
  * @author saray
  */
-public class PasswordErrorException extends Exception implements Serializable {
+public class NoServerConnectionException extends Exception implements Serializable {
 
-    private String password;
+    private String message;
+    //  private Error code;
 
     /**
      * Method to set the message
      *
-     * @param passwd
+     * @param log
      */
-    public PasswordErrorException(String passwd) {
-        this.password = passwd;
+    public NoServerConnectionException(String m) {
+        this.message = m;
     }
 
     /**
@@ -31,8 +32,9 @@ public class PasswordErrorException extends Exception implements Serializable {
      * @return a string with the information to the user or null
      */
     public String getMessage() {
-        if (password == null) {
-            return "Usuario o contraseña incorrectos";
+        if (message == null) {
+            return "Ha ocurrido un error inesperado"
+                    + "\n Inténtelo de nuevo en unos minutos";
         } else {
             return null;
         }
