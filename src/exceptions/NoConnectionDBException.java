@@ -27,10 +27,10 @@ public class NoConnectionDBException extends Exception implements Serializable {
      */
     public String getMessage() {
         if (message == null) {
-            return "Ha ocurrido un error inesperado"
-                    + "\n Inténtelo de nuevo en unos minutos";
+            return "NoConnectionDBException";
         } else {
             return null;
         }
     }
+   
 }

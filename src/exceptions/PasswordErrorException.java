@@ -32,7 +32,7 @@ public class PasswordErrorException extends Exception implements Serializable {
      */
     public String getMessage() {
         if (password == null) {
-            return "Usuario o contraseña incorrectos";
+            return "PasswordErrorException";
         } else {
             return null;
         }

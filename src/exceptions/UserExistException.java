@@ -27,7 +27,7 @@ public class UserExistException extends Exception implements Serializable {
      */
     public String getMessage() {
         if (Login == null) {
-            return "El login ya está registrado";
+            return "UserExistException";
         } else {
             return null;
         }

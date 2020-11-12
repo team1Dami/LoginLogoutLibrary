@@ -27,7 +27,7 @@ public class LoginNoExistException extends Exception implements Serializable {
      */
     public String getMessage() {
         if (message == null) {
-            return "El usuario no está registrado";
+            return "LoginNoExistException";
         } else {
             return null;
         }
