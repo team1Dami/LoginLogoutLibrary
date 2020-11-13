@@ -33,8 +33,7 @@ public class NoServerConnectionException extends Exception implements Serializab
      */
     public String getMessage() {
         if (message == null) {
-            return "Ha ocurrido un error inesperado"
-                    + "\n Inténtelo de nuevo en unos minutos";
+            return "NoServerCon";
         } else {
             return null;
         }
