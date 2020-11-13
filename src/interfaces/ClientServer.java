@@ -6,7 +6,6 @@ import exceptions.NoConnectionDBException;
 import exceptions.NoServerConnectionException;
 import exceptions.PasswordErrorException;
 import exceptions.UserExistException;
-import org.omg.CORBA.UserException;
 
 /**
  * Interface common to both projects loginlogoutServer && ApplicationCliente

@@ -1,5 +1,6 @@
 package classes;
 
+import exceptions.NoServerConnectionException;
 import java.io.Serializable;
 
 /**
@@ -57,6 +58,15 @@ public class Message implements Serializable {
     }
 
     /**
+     * Method to set the User class with the values of the client
+     *
+     * @param user
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
      * Method to obtain the exception message
      *
      * @return string message or null
@@ -67,15 +77,6 @@ public class Message implements Serializable {
         } else {
             return this.exception.getMessage();
         }
-    }
-
-    /**
-     * Method to set the User class with the values of the client
-     *
-     * @param user
-     */
-    public void setUser(User user) {
-        this.user = user;
     }
 
     /**

@@ -1,16 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package exceptions;
 
 import java.io.Serializable;
 
 /**
+ * LoginNoExistException class
  *
  * @author saray
  */
-public class LoginNoExistException extends Exception implements Serializable{
-    
+public class LoginNoExistException extends Exception implements Serializable {
+
+    private String message;
+
+    /**
+     * Method to set the message
+     *
+     * @param log
+     */
+    public LoginNoExistException(String m) {
+        this.message = m;
+    }
+
+    /**
+     * Method to get the message
+     *
+     * @return a string with the information to the user or null
+     */
+    public String getMessage() {
+        if (message == null) {
+            return "El usuario no está registrado";
+        } else {
+            return null;
+        }
+    }
 }

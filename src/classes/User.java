@@ -1,6 +1,7 @@
 package classes;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -27,7 +28,7 @@ public class User implements Serializable {
     private UserStatus status;
     private UserPrivilege privilege;
     private String passwd;
-    private java.sql.Date lastAccess;
+    private java.sql.Timestamp lastAccess;
     private java.sql.Date lastPasswdChange;
 
     /**
@@ -165,7 +166,7 @@ public class User implements Serializable {
      *
      * @return Date lastAccess
      */
-    public Date getLastAccess() {
+    public Timestamp getLastAccess() {
         return lastAccess;
     }
 
@@ -174,8 +175,8 @@ public class User implements Serializable {
      *
      * @param lastAccess
      */
-    public void setLastAccess(Date lastAccess) {
-        this.lastAccess = (java.sql.Date) lastAccess;
+    public void setLastAccess(Timestamp lastAccess) {
+        this.lastAccess = (java.sql.Timestamp) lastAccess;
     }
 
     /**
